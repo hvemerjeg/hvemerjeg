@@ -44,7 +44,7 @@ for _ in range(n):#This line of code is due to the need to get diferent credit c
             elif contador == (len(credit_card_number) -1):#If we finished the iteration through each element of the credit card number and no invalid has been found, then we print
                 #valid
                     print("Valid")
-            else:#We can nor print valid yet, neither invalid because we are not finished trying every element of the credit card number.
+            else:#We can not print valid yet neither invalid because we are not finished trying every element of the credit card number.
                 contador += 1
     else:
         print("Invalid")#No pattern has been found, then we print invalid.
