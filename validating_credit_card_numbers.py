@@ -29,7 +29,7 @@ for _ in range(n):#This line of code is due to the need to get diferent credit c
     pattern2 ="^[4-6]{1}[0-9]{3}-[0-9]{4}-[0-9]{4}-[0-9]{4}$"#This pattern is for validating credit card 
 #numbers with a hyphen
     if len(credit_card_number) == 16:
-        x = 3#Because we need to validate that we do not have more than 3 consecutive repeated digits. So we try from i to i + x for every elemet i in the credit card number.
+        x = 3#Because we need to validate that we do not have more than 3 consecutive repeated digits. So we try from i to i + x for every element i in the credit card number.
     elif len(credit_card_number) == 19:
         x = 5#In this case, when we are validating credit card numbers with hyphen is necessary that the x value is higher. Example: 5133-3367-8912-3456. Note that we have 
     #the number three repeated more than three times, but we have a hyphen between this repeated numbers. If we count only from lets say i to i + 3 we will miss the fact
