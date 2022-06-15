@@ -1,13 +1,20 @@
 #THIS CODE IS THE SOLUTION FOR A HACKERRANK PROBLEM "CALLED VALIDATING CREDIT CARD NUMBERS"
 #The problem is the following:
-"""A valid credit card from ABCD Bank has the following characteristics:
+"""A valid credit card has the following characteristics:
 
 1. It must start with a 4, 5 or 6.
 2. It must contain exactly 16 digits.
 3. It must only consist of digits (0-9).
 4. It may have digits in groups of 4, separated by one hyphen "-".
 5. It must NOT use any other separator like ' ' , '_', etc.
-6. It must NOT have 4 or more consecutive repeated digits."""
+6. It must NOT have 4 or more consecutive repeated digits.
+EXAMPLE:
+4123456789123456 : Valid
+5123-4567-8912-3456 : Valid
+61234-567-8912-3456 : Invalid, because the card number is not divided into equal groups of 4.
+4123356789123456 : Valid
+51-67-8912-3456 : Invalid, consecutive digit 3 is repeating 4 times.
+5123 -- 4567 -- 8912 -- 3456 : Invalid, because space '  ' and - are used as separators."""
 #I found this problem interesting because of the need to know RegEx and the applications of this knowledge through
 #a module called re. More information about this module in the oficial documentation of python: 
 # https://docs.python.org/3/library/re.html
