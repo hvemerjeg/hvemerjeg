@@ -28,3 +28,4 @@ if __name__ == '__main__':
 #Split is to get different values in the same line, and we are using a delimiter space, and a limit of entries of values to n - 1. So the list has lentgh n.
         my_matriz.append(filas_columnas)#Appending each list to the created list my_matriz, to create a matrix.
     diagonal_difference(my_matriz)#We call our function.
+#I think that this problem was a very easy one, but interesting enough to share.
