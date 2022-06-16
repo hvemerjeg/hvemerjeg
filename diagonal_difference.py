@@ -15,7 +15,7 @@ def diagonal_difference(matriz):#This our function that will hold the code to fi
 #where i + j = matrix dimension + 1, where i is for rows and j is for columns. But since python starts the array indexing at zero, we consider that the
 #secondary diagonal is formed by the elements that holds the position ij where i + j = length of the matrix - 1.  
 #Because we are iterating through i, we need to see the relationship betwwen i and j for the elements of the secondary diagonal. This relationship is inversely proportional.
-#In a 3x3 mtarix the elements that forms the secondary diagonal are the following(starting the count at one): (i=1,j=3),(i=2,j=2),(i=3,j=1). So, when i increases by one
+#In a 3x3 matrix the elements that forms the secondary diagonal are the following(starting the count at one): (i=1,j=3),(i=2,j=2),(i=3,j=1). So, when i increases by one
 #j decreases by one.
     print(abs(diagonal_principal - diagonal_secundaria))#abs is not related in this case with a strong belly, 
 #but for obtaining the absolute value of the principal diagonal minus the secondary diagonal.
