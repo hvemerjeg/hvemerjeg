@@ -1,5 +1,5 @@
 #THIS CODE IS AN EASY IMPLEMENTATION OF THE CAESAR CIPHER
-#If you do not know how the caesar cipher works check out the description given by Wikipedia(I found it very helpful):https://en.wikipedia.org/wiki/Caesar_cipher:
+#If you do not know how the Caesar cipher works check out the description given by Wikipedia(I found it very helpful):https://en.wikipedia.org/wiki/Caesar_cipher:
 def my_cifrado_caesar_2(string, llave):
     my_alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'#My string where the alphabet in use is stored.
     indice = []#I will make use of this empty list to store the index that each letter has in the alphabet(my_alphabet).
