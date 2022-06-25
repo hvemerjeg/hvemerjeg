@@ -3,7 +3,7 @@
 def vigenere2(s, k):#This is our function where our Vigenère cipher implementation take part. Two parameters are taken.
     my_alphabet = 'ABCDEFGHIJKLMNÑOPQRSTUVWXYZ'#My string where the alphabet in use is stored.
     cifrado = []#I will make use of this list to store the letters whose position are the result of the sum of the index position
-#that each letter of the my_string have in the alphabet and the index position that each letter of the key have in the alphabet. 
+#that each letter of my_string have in the alphabet and the index position that each letter of the key have in the alphabet. 
     x = 0#This variable will work as a count.
     y = 0#This variable will work as a count too.
     while x < len(s) and y < len(k):
