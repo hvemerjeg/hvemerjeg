@@ -8,7 +8,7 @@ def mcm(arr):#This is our function that will hold the code to find the mcm of n 
         while i > 1:#We know when we are done in our factor decomposition when the number is equals to 1
             if i % h == 0:#If the number we want to decompose is divisible by 2 we start our decomposition with 2. Otherwise we increase by one since the distribution
 #of the prime numbers is a real problem for real mathematicians...
-                lista_de_listas[arr.index(i)].append(h)#We append h to listas_de_listas at the same index that i has in arr.
+                lista_de_listas[arr.index(i)].append(h)#We append h to lista_de_listas at the same index that i has in arr.
                 arr.insert(arr.index(i), (int(i / h)))
                 arr.remove(i)#The last two lines is a way to update the value of i. First of all we insert at index(i) the result of i / h and the we delete i.
                 i = int(i / h)#We update the value of i to i / h
