@@ -2,7 +2,7 @@
 import numpy#We will need the numpy function .prod() to compute the product of all the elemenets inside a list.
 def mcm(arr):#This is our function that will hold the code to find the mcm of n numbers.
     lista_de_listas = [[] for i in arr]#With lists comprehesion we are going to create list that contains differents lists(nested list). The numbers of lists 
-#inside the list will depend on the number of numbers that we want to find the mcm.
+#inside the list will depend on the number of numbers whose we want to find the mcm.
     for i in arr:#This loop will do the following:
         h = 2#To find the mcm of n numbers first of all we need to decompose into prime factors. The first prime factor is 2, that is the reason why h queals to 2.
         while i > 1:#We know when we are done in our factor decomposition when the number is equals to 1
