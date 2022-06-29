@@ -1,11 +1,11 @@
-#THIS CODE IS AN EASY IMPLEMENTATION MCM CALCULATOR
+#THIS CODE IS AN EASY IMPLEMENTATION OF A MCM CALCULATOR
 import numpy#We will need the numpy function .prod() to compute the product of all the elemenets inside a list.
 def mcm(arr):#This is our function that will hold the code to find the mcm of n numbers.
     lista_de_listas = [[] for i in arr]#With lists comprehesion we are going to create a list that contains differents lists(nested list). The numbers of lists 
-#inside the list will depend on the number of numbers whose we want to find the mcm.
-    for i in arr:#This loop will do the following:
-        h = 2#To find the mcm of n numbers first of all we need to decompose into prime factors. The first prime factor is 2, that is the reason why h queals to 2.
-        while i > 1:#We know when we are done in our factor decomposition when the number is equals to 1
+#inside the list will depend on the number of numbers of which we want to find the mcm.
+    for i in arr:
+        h = 2#To find the mcm of n numbers first of all we need to decompose into prime factors. The first prime factor is 2, that is the reason why h equals 2.
+        while i > 1:#We know when we are done in our factor decomposition when the number is equal to 1
             if i % h == 0:#If the number we want to decompose is divisible by 2 we start our decomposition with 2. Otherwise we increase by one since the distribution
 #of the prime numbers is a real problem for real mathematicians...
                 lista_de_listas[arr.index(i)].append(h)#We append h to lista_de_listas at the same index that i has in arr.
@@ -33,8 +33,8 @@ def mcm(arr):#This is our function that will hold the code to find the mcm of n 
     print(numpy.prod(mcm))#We compute the product of all the prime factors raised to its highest power.
 
 if __name__ == '__main__':
-    my_lista = []#Here we are going to store the numbers whose we are going to find the mcm.
-    n = int(input("Introduce la cantidad de números con los que quieres operar: "))#We insert the number of numbers we want to find the mcm.
+    my_lista = []#Here we are going to store the numbers of which we are going to find the mcm.
+    n = int(input("Introduce la cantidad de números con los que quieres operar: "))#We insert the number of numbers of which we want to find the mcm.
     for _ in range(n):
         my_lista.append(int(input("Introduce los números de los cuales quieres obtener el mínimo común múltiplo: ")))#We are appending every number to my_lista.
     mcm(my_lista)#We are calling our function.
