@@ -15,7 +15,7 @@ def mcm(arr):#This is our function that will hold the code to find the mcm of n 
             else:
                 h += 1
     """COGIENDO LOS COMUNES Y NO COMUNES ELEVADOS A SU MÁXIMO EXPONENTE"""
-    pseudo_todos = list(map(set, lista_de_listas))#We make take our list of lists and convert the lists inside this list to sets and we store this in this pseudo_todos
+    pseudo_todos = list(map(set, lista_de_listas))#We take our list of lists and convert the lists inside this list to sets and we store this in this pseudo_todos
 #variable.
     todos = set()#We create a new empty set where we are going to store all the prime factors
     for i in pseudo_todos:#This loop is for store all the prime factors in todos.
