@@ -13,7 +13,7 @@ def vigenere2(s, k):#This is our function where our Vigenère cipher implementat
 #We use %27 because each time that we pass through 27 we need to start from 0. For more information
 #about modular arithmetic:https://en.wikipedia.org/wiki/Modular_arithmetic.
         x += 1
-        y = (y + 1) % len(k)#Here we are using %len(k) once again because each time we passed through the lenght of
+        y = (y + 1) % len(k)#Here we are using %len(k) once again because each time we passed through the length of
 #k we need to start from 0.
     print("".join(cifrado))#We join all the letters in the list called "cifrado". And we get our encrypted string.
 
