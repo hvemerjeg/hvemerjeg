@@ -7,7 +7,7 @@ def bubblesort(arr):#This is our main function that will hold our bubble sort im
     número_de_comparaciones = (len(arr) - 1)#In the first pass we will need to make n - 1 comparisons, where n is the length of the list. This number is decreasing since 
 #after the first pass we have the highest number in the correct position. So after the first pass we will need to make n - 2 comparisons, after the third n - 3 comparisons etc..
     swap = True#We will make use of this variable to check if there is a swap. If in one whole pass there has been no change we will know that our elements are ordered correctly. 
-    while número_de_comparaciones > 0 and swap == True:#So if there is not a swap in a whole pass meaning that swap equals false or the number of comparisons is not higher
+    while número_de_comparaciones > 0 and swap == True:#So if there has been no change in a whole pass meaning that swap equals false or the number of comparisons is not higher
 #than 0 we know that we are done.
         swap = False
         for i in range(número_de_comparaciones):
