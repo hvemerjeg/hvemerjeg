@@ -14,7 +14,7 @@ def bubblesort(arr):#This is our main function that will hold our bubble sort im
             while arr[i] > arr[i + 1]:#We compare the element in the position i with the element in the position i + 1. If the element in the position i is higher than the
 #element in the position i + 1 we swap them.
                 arr[i], arr[i + 1] = arr[i + 1], arr[i]#swaping them if the above condition is met.
-                swap = True#Setting swap to true because there has been a swap.
+                swap = True#Setting swap to true because there has been a change.
         número_de_comparaciones -= 1#As I said before, after one whole pass through the array we have the highest number in the correct position, so we will need to make
 #one less comparison.
     print(arr)#Getting our ordered list.
