@@ -25,7 +25,7 @@ if __name__ == '__main__':
     n = int(input())
     for i in range(n):
         filas_columnas = list(map(int, input().split(" ", n - 1)))#Using map to convert each input to an int. List is to store all the inputs in a sigle list.
-#Split is to get different values in the same line, and we are using a delimiter space, and a limit of entries of values to n - 1. So the list has lentgh n.
+#Split is to get different values in the same line, and we are using a delimiter space, and a limit of entries of values to n - 1. So the list has length n.
         my_matriz.append(filas_columnas)#Appending each list to the created list my_matriz, to create a matrix.
     diagonal_difference(my_matriz)#We call our function.
 #I think that this problem was a very easy one, but interesting enough to share.
