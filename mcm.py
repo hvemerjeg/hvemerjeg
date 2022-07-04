@@ -1,6 +1,6 @@
 #THIS CODE IS AN EASY IMPLEMENTATION OF A MCM CALCULATOR
 import numpy#We will need the numpy function .prod() to compute the product of all the elemenets inside a list.
-def mcm(arr):#This is our function that will hold the code to find the mcm of n numbers.
+def mcm(arr: list):#This is our function that will hold the code to find the mcm of n numbers.
     lista_de_listas = [[] for i in arr]#With lists comprehesion we are going to create a list that contains differents lists(nested list). The numbers of lists 
 #inside the list will depend on the number of numbers of which we want to find the mcm.
     for i in arr:
