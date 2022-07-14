@@ -14,23 +14,23 @@ def display_board():#BOARD DRAW.
     print("+" + "-" * 30 + "+")
     print(("|" + " " * 9 + "|" + " " * 9 + "|" + " " * 10 + "|")) 
     print(("|" + " " * 9 + "|" + " " * 9 + "|" + " " * 10 + "|"))
-    print(("|" + " " * 4 + a + " " * 4 + "|" + " " + " " * 3 + b + " " * 4 + "|" + " " * 5 + c + " " * 4 + "|"))#MEDIO
+    print(("|" + " " * 4 + a + " " * 4 + "|" + " " + " " * 3 + b + " " * 4 + "|" + " " * 5 + c + " " * 4 + "|"))
     print(("|" + " " * 9 + "|" + " " * 9 + "|" + " " * 10 + "|"))
     print(("|" + " " * 9 + "|" + " " * 9 + "|" + " " * 10 + "|"))
     print("+" + "-" * 30 + "+")
     print(("|" + " " * 9 + "|" + " " * 9 + "|" + " " * 10 + "|")) 
     print(("|" + " " * 9 + "|" + " " * 9 + "|" + " " * 10 + "|"))
-    print(("|" + " " * 4 + d + " " * 4 + "|" + " " + " " * 3 + e + " " * 4 + "|" + " " * 5 + f + " " * 4 + "|"))#MEDIO
+    print(("|" + " " * 4 + d + " " * 4 + "|" + " " + " " * 3 + e + " " * 4 + "|" + " " * 5 + f + " " * 4 + "|"))
     print(("|" + " " * 9 + "|" + " " * 9 + "|" + " " * 10 + "|"))
     print(("|" + " " * 9 + "|" + " " * 9 + "|" + " " * 10 + "|"))
     print("+" + "-" * 30 + "+")
     print(("|" + " " * 9 + "|" + " " * 9 + "|" + " " * 10 + "|")) 
     print(("|" + " " * 9 + "|" + " " * 9 + "|" + " " * 10 + "|"))
-    print(("|" + " " * 4 + g + " " * 4 + "|" + " " + " " * 3 + h + " " * 4 + "|" + " " * 5 + i + " " * 4 + "|"))#MEDIO
+    print(("|" + " " * 4 + g + " " * 4 + "|" + " " + " " * 3 + h + " " * 4 + "|" + " " * 5 + i + " " * 4 + "|"))
     print(("|" + " " * 9 + "|" + " " * 9 + "|" + " " * 10 + "|"))
     print(("|" + " " * 9 + "|" + " " * 9 + "|" + " " * 10 + "|"))
     print("+" + "-" * 30 + "+")
-###Data
+
 player1 = input("Por favor introduce el nombre del jugador 1: ")
 player2 = input("Por favor introduce el nombre del jugador 2: ")
 lanzar_juego(player1, player2)
@@ -48,7 +48,7 @@ play = 1#One represents the first player(player1), two represents the second pla
 diccionario_moves = {1: [0, 0], 2: [0, 1], 3: [0, 2], 4: [1, 0], 5: [1, 1], 6: [1, 2], 7: [2, 0], 8: [2, 1], 9: [2, 2]}#With the use of a dictionary
 #we are making relations between the positions(1, 2, 3...9) and the "real" position. If we made use of a list of length nine instead of a nested list(matrix) this 
 #variable needs to be affected too.
-###Data
+
 while contador < 10:#Since we only have nine moves, nine turns. We are playing a maximum of nine moves.
     
     if play % 2 != 0:
