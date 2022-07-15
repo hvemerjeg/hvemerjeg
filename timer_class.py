@@ -54,6 +54,6 @@ if __name__ == '__main__':#As you know, any module named __main__ is actually no
         the_input = list(map(int, input().split(" ", 2)))
         horas, minutos, segundos = the_input[0], the_input[1], the_input[2]
         time = Timer(horas, minutos, segundos)
-        print(time.show_time())
+        print("\n" + time.show_time())
         time.next_second()
         time.prev_second()
