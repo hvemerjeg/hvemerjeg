@@ -1,4 +1,4 @@
-#THIS CODE IS AN EASY IMPLEMENTATION OF THE GAME TIC TAC TOE. IT WAS AN EXERCISE OF THE PCEP CERTIFICATION.
+#THIS CODE IS AN EASY IMPLEMENTATION OF THE GAME TIC TAC TOE. IT IS AN EXERCISE THAT APpEARS ON THE STUDY RESOURCES OF THE PCEP.
 #I THINK THAT THIS CODE MIGHT BE USEFUL FOR SOME PEOPLE.
 def lanzar_juego(player1: str, player2: str):#This function will perform a greeting.
     print(f"\nHi {player1} and {player2}")#Using kind of the new school of python formatting we print our greetings with the variables player1 and player2.
