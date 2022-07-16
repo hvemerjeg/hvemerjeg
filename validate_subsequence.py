@@ -3,7 +3,7 @@
 #The first condition that the second list/tuple needs to meet to be a subsequence
 #of the first tuple/list, is that it must be a subset of the first list/
 #tuple. The second condition that the second list/tuple needs to meet, is that the
-#elements appear in the same order as they appear in the main list/tuple.
+#elements must appear in the same order as they appear in the main list/tuple.
 #EXAMPLE the_array = 5, 1, 22, 25, 6, -1, 8, 10 and the_sequence = 1, 6, -1, 10. In this case we should
 #display true because the_sequence is a subsequence of the the_array.
 def valid_subsequence(tupla: tuple, sequence: tuple):#I decided to use tuples instead of list
