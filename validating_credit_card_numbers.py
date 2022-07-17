@@ -34,7 +34,7 @@ for _ in range(n):#This line of code is due to the need to get diferent credit c
         x = 5#In this case, when we are validating credit card numbers with hyphen is necessary that the x value is higher. Example: 5133-3367-8912-3456. Note that we have 
     #the number three repeated more than three times, but we have a hyphen between this repeated numbers. If we count only from lets say i to i + 3 we will miss the fact
     # that the number three is repeated more than three times consecutive.
-    if re.search(pattern, credit_card_number) or re.search(pattern2, credit_card_number):#If one of the patterns is matched, then we make the following.
+    if re.search(pattern, credit_card_number) or re.search(pattern2, credit_card_number):#If one of the patterns is matched, then we do the following.
                 
         for i in range(len(credit_card_number)):#We iterate through every element not taking the element but the index of the element.
             if credit_card_number[i: i + x].count(credit_card_number[i]) > 3:#We try to find if there is a number consecutive repeated more than three times. If this is the case
