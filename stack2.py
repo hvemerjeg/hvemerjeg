@@ -1,3 +1,4 @@
+#STACK DATA STRUCTURE
 class Stack:
     def __init__(self):
         self.__stack_list = []
@@ -24,7 +25,7 @@ class Stack:
         return self.top == -1
         
 
-
+#SOME TESTS
 if __name__ == '__main__':
     stack1 = Stack()
     for numero in range(12):
