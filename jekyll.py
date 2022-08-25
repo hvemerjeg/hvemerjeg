@@ -35,7 +35,7 @@ def grades(file_name: str):#Here we have our main function.
         archive.close()#We close the stream that make the interaction with the file possible.
     except IOError as e:
         print(f"\033[1;31;40mI/O Error ocurred: {os.strerror(e.errno)}\033[0m")#errno is a property of the class exception IOError. Is a number, so we can get
-#the string description makeing use of the strerror function that comes with the os module.
+#the string description making use of the strerror function that comes with the os module.
         exit()
 
 if __name__ == '__main__':
