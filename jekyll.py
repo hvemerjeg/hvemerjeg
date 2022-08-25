@@ -13,6 +13,12 @@
 #Anna	Boleyn	11
 #Andrew	Cox	1.5
 
+#Your task is to write a program which:
+
+#·asks the user for Prof. Jekyll's file name.
+#·reads the file contents and counts the sum of the received points for each student.
+#·prints a simple (but sorted) report.
+
 
 import os#We are importing the os module.
 def grades(file_name: str):#Here we have our main function.
