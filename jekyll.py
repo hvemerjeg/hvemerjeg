@@ -31,7 +31,7 @@ def grades(file_name: str):#Here we have our main function.
             if len(line) != 3:#If the lenght of the line is different than three we print something descriptive an we exit the code.
                 print(f"Bad line in archive {file_name}")
                 exit()
-            alumno = " ".join(line[:2])#We join the first element(name) and the second element(last name) with a space between.
+            alumno = " ".join(line[:2])#We join the first element(name) and the second element(last name) with a space in between.
             if alumno not in diccionario:#If the student is not in the dictionary we need to create the key with the name and last name and set the value points 
 #to zero. Otherwie if we try to update the value of a non existing key we will get an error.
                 diccionario[alumno] = 0
