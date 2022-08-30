@@ -1,4 +1,4 @@
-#BINARY TREE DATA STRUCTURE AN PRE-ORDER TRAVERSAL.
+#BINARY TREE DATA STRUCTURE AND PRE-ORDER TRAVERSAL.
 class Node:#We create a class Node. Since we are going to create a binary tree, each node has at most two child nodes.
     def __init__(self, value: int, left=None, right=None):#We accept three parameters: the value of the node, the value of the left child node of the node,
 #and the value of the right child node of the node.
