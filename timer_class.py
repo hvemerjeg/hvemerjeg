@@ -1,4 +1,5 @@
 #THIS IS AN OOP EXERCISE THAT APPEARS IN THE PCAP STUDY RESOURCES
+#This code is for displaying a time in a specific format and also adding or subtracting one second to that time.
 class Timer:#Here we define our class Timer and we specify some attributes.
     def __init__(self, hours: int, minutes: int, seconds: int):#Our class will have three attributes. 
 #All the objects created using this class will share the attributes, but we can create
