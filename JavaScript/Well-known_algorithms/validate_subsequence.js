@@ -1,3 +1,4 @@
+/*For an explanation of the algorithm please go to the python version of the algorithm*/
 function validSubSequence(arr, s) {
 	arr_index = 0;
 	s_index = 0;
