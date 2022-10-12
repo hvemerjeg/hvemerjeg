@@ -1,3 +1,4 @@
+/*For an explanation of the algorithm please go to the python version of the algorithm*/
 function caesarCipher(plain_text, key) {
     plain_text = plain_text.toUpperCase();
     alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
