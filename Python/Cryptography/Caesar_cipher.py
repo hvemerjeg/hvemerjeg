@@ -15,7 +15,7 @@ def caesarCipher(plain_text: str, key: int):
     plain_text = plain_text.upper()
     alphabet = [chr(ch) for ch in range(ord('A'), ord('Z') + 1)]#This is a little trick to create our alphabet using python built-in functions. The chr function returns
 #the letter that corresponds to a decimal value, and the ord function returns the decimal value that corresponds to a letter. You can find all of these correlations 
-#between values and letters searching for the ASCII table. 
+#between values and letters by searching for the ASCII table. 
     cipher_text = ''
     for i in range(len(plain_text)):
         cipher_text += alphabet[(alphabet.index(plain_text[i]) + key) % len(alphabet)]
