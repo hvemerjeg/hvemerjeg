@@ -10,8 +10,17 @@ def my_cifrado_caesar_2(string, llave):
             cifrado.append(my_alphabet[(i + llave) % 26])#We make use of the modulus 26 because each time that we pass through 26 we need to start from 0. For more information
             #about modular arithmetic:https://en.wikipedia.org/wiki/Modular_arithmetic.
     print("".join(cifrado))#We join all the letters in the list called "cifrado". And we get our encrypted string.
+#A more compressed way
+def caesarCipher(plain_text: str, key: int):
+    plain_text = plain_text.upper()
+    alphabet = [chr(ch) for ch in range(ord('A'), ord('Z') + 1)]
+    cipher_text = ''
+    for i in range(len(plain_text)):
+        cipher_text += alphabet[(alphabet.index(plain_text[i]) + key) % len(alphabet)]
+    return cipher_text
 if __name__ == '__main__':
     my_string = input().upper()#We are making all the letters uppercase. This is just a preference.
     llave = int(input())#The key defines how many steps to the right we are going to take to perform the encryption of our letters.
     my_cifrado_caesar_2(my_string, llave)#We call the function.
 #This implementation of the Caesar cipher is not a very fancy one, but enough to show the fundamentals of the Caesar cipher and interesting concepts as modular arithmetic.
+    print(caesarCipher(my_string, llave))
