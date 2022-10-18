@@ -1,4 +1,4 @@
-#BINARY TREE DATA STRUCTURE AND PRE-ORDER TRAVERSAL.
+#BINARY TREE DATA STRUCTURE AND PRE-ORDER TRAVERSAL, IN-ORDER TRAVERSAL, POST-ORDER TRAVERSAL.
 class Node:#We create a class Node. Since we are going to create a binary tree, each node has at most two child nodes.
     def __init__(self, value: int, left=None, right=None):#We accept three parameters: the value of the node, the value of the left child node of the node,
 #and the value of the right child node of the node.
@@ -12,16 +12,33 @@ class Node:#We create a class Node. Since we are going to create a binary tree, 
 class BinaryTree:#We create a class BinaryTree. So we can have different binary trees that are the result of connecting different nodes in a specific way.
     def __init__(self, root: int):
         self.root = Node(root)#Here we are defining a instance variable called root. This instacnce variable is going to be a node, the root node.
-        self.fifo = []#I will use this list to store Pre-Order Traversal result.
+        self.pre_order = []#I will use this list to store Pre-Order Traversal result.
+        self.in_order = []#I will use this list to store In-Order Traversal result.
+        self.post_order = []#I will use this list to store Post-Order Traversal result.
 
-    def pre_order_traversal(self, root: object):#This function is to traverse the node. In this type of traverse the root node is 
+    def preOrderTraversal(self, root: object):#This function is to traverse the node. In this type of traverse the root node is 
 #visited first, then the left subtree and finally the right subtree.
         if root:#We check if the root object exists.
             #print(root.value, end=" --> ")
-            self.fifo.append(root.value)#We append the value of the root to the fifo instance list variable.
-            self.pre_order_traversal(root.left)#We use recursion to call the left node of each node.
-            self.pre_order_traversal(root.right)#We use recursion to call the right node of each node. 
-        return self.fifo
+            self.pre_order.append(root.value)#We append the value of the root to the pre_order instance list variable.
+            self.preOrderTraversal(root.left)#We use recursion to call the left node of each node.
+            self.preOrderTraversal(root.right)#We use recursion to call the right node of each node. 
+        return self.pre_order
+
+    def inOrderTraversal(self, root: object):#This function is to traverse the node. In this type of traverse the left node is vistised, then the 
+#current node and then the right node.
+        if root:
+            self.inOrderTraversal(root.left)
+            self.in_order.append(root.value)
+            self.inOrderTraversal(root.right)
+        return self.in_order
+
+    def postOrderTraversal(self, root: object):#In this type of traversal we visit first the left subtree, then the right subtree, and then the root node.
+        if root:
+            self.postOrderTraversal(root.left)
+            self.postOrderTraversal(root.right)
+            self.post_order.append(root.value)
+        return self.post_order
 
 if __name__ == '__main__':
     #Creating the binary tree.
@@ -45,7 +62,10 @@ if __name__ == '__main__':
     #               40
     #             /    \  
     #            10    100
-    print(bt1.pre_order_traversal(bt1.root))
-    print(bt2.pre_order_traversal(bt2.root))
-    
+    print(f"\033[1;32;40mPre-Order Traversal:\033[1;33;40m {bt1.preOrderTraversal(bt1.root)}\033[0m")
+    print(f"\033[1;32;40mIn-Order Traversal:\033[1;33;40m {bt1.inOrderTraversal(bt1.root)}\033[0m")
+    print(f"\033[1;32;40mPost-Order Traversal:\033[1;33;40m {bt1.postOrderTraversal(bt1.root)}\033[0m")
+    print(f"\033[1;32;40mPre-Order Traversal:\033[1;33;40m {bt2.preOrderTraversal(bt2.root)}\033[0m")
+    print(f"\033[1;32;40mIn-Order Traversal:\033[1;33;40m {bt2.inOrderTraversal(bt2.root)}\033[0m")
+    print(f"\033[1;32;40mPost-Order Traversal:\033[1;33;40m {bt2.postOrderTraversal(bt2.root)}\033[0m")
     
