@@ -1,5 +1,6 @@
 #THIS CODE IS A SOLUTION FOR A WELL KNOWN CODING PROBLEM CALLED "First non repeating character"
-#The task is to find the first non repeting character in a given non empty string
+#The task is to find the first non repeting character in a given non empty string and return the index of that character
+#If there is not a single character that is only once in the string, we need to return -1
 def firstNonRepeatingCharacter(string: str):
     dict_frequency = {}#We create and empty dictionary that we are going to use to keep track of repeating characters
 
