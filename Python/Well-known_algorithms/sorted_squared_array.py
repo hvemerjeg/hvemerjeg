@@ -24,10 +24,6 @@ def sortedSquaredArray(arr: list):
             r -= 1
     return result
 
-
-
-
-
 if __name__ == '__main__':
     #TESTS
     dictionary_tests = {(1, 2, 3, 5, 6, 8, 9): [1, 4, 9, 25, 36, 64, 81], (0,): [0], tuple(): [], (-3, 1, 2): [1, 4, 9]}
