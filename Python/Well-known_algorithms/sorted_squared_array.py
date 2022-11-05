@@ -14,9 +14,9 @@ def sortedSquaredArray(arr: list):
     #Take a look at the code:
     l = 0 
     r = len(arr) - 1 
-    while l <= r: #We are going to compare the absolute value of the number at index l and compare it to the number at index r
+    while l <= r: #We are going to take the absolute value of the number at index l and compare it to the number at index r
         if abs(arr[l]) >= arr[r]: #In case that the absolute value of the number at index l is grater or equal to the number at index r
-            #We are going to insert in the result array the value of the number at index l raised to two and add 1 to l
+            #We are going to insert into the result array the value of the number at index l raised to two and add 1 to l
             result.insert(0, arr[l] ** 2)
             l += 1
         else: #In the other case, we are going to insert the number at index r in the result array and subtract 1 to r
