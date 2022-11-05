@@ -1,6 +1,6 @@
 #THIS IS AN IMPLEMENTATION OF THE DEPTH-FIRST SEARCH ALGORITHM.
 #This algorithm is used for traversing a graph.
-#In this case, I will implement it both with recursion and iteration to traverse an acyclic directed graph.
+#In this case, I will implement it both with recursion and iteration to traverse a graph.
 
 #Iteration
 def depthFirstSearch(graph, source):
