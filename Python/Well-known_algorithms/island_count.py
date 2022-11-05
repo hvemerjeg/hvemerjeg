@@ -14,7 +14,7 @@
 def riverSizes(matrix): #This is the first function.
 	result = 0 #Since we need to store the number of islands we are going to create a variable to zero and increment it if needed
 	visited = [[False for col in row] for row in matrix] #It is fundamental to keep track of the visited nodes, otherwise we will be lost visiting the same node infinitely. For this 
-#purpose we are going to create another matrix full of False values. In case that we visit a element in index i, j we will set the element in this position to True.
+#purpose we are going to create the same matrix full of False values instead oof 1's and 0's. In case that we visit a element in index i, j we will set the element in this position to True.
 	for i in range(len(matrix)): #We iterate through the matrix
 		for j in range(len(matrix[i])):
 			if visited[i][j]: #If the element is already visited we continue the iteration 
