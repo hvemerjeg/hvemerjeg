@@ -34,7 +34,7 @@ def traverseNode(i, j, matrix, visited):
 		if visited[i][j]: #If we visited this element we continue the while loop
 			continue
 		visited[i][j] = True #Otherwise we set the element to true in the visited matrix
-		if matrix[i][j] == 0:
+		if matrix[i][j] == 0: #If the element is 0 we hit river, so we continue to the next iteration
 			continue
 		at_least_river = True #We hit land
 		neighbors = getNeighbors(i, j, matrix, visited) #Getting the neighbors of the element
