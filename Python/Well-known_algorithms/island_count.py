@@ -28,7 +28,7 @@ def traverseNode(i, j, matrix, visited):
 	at_least_river = False #I Will use this flag to know if in any moment I hit land
 	queue = [[i, j]] #The elements inside the queue are lists containing the indexes i for row and j for columns
 	while len(queue): #While the length of the queue is different than 0 we keep the while loop
-		current = queue.pop(0) #We empty the queue. Now current contains a list with indexes i and j
+		current = queue.pop(0) #We take pop an element of the queue. Now current contains a list with indexes i and j
 		i = current[0] #Set the first value of this list to i
 		j = current[1] #Set the second value of this list to j
 		if visited[i][j]: #If we visited this element we continue the while loop
