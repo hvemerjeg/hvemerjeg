@@ -17,7 +17,7 @@ def riverSizes(matrix): #This is the first function.
 #purpose we are going to create the same matrix full of False values instead oof 1's and 0's. In case that we visit a element at index i, j we will set the element in this position to True.
 	for i in range(len(matrix)): #We iterate through the matrix
 		for j in range(len(matrix[i])):
-			if visited[i][j]: #If the element is already visited we continue the iteration 
+			if visited[i][j]: #If the element is already visited we skip to the next iteration
 				continue
 			result += traverseNode(i, j, matrix, visited) #Otherwise we enter the function traverseNode
 	return result
