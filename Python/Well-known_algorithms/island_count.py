@@ -7,7 +7,7 @@
 #We have two lands here: one of length three and one of length one, so we should return two.
 #One of the keys to solve this problem is to think of the matrix as a graph and treat it elements as nodes!
 #We are going to split this problem in three different functions: 
-#One to return the final result and iterate through the elements on the matrix
+#One to return the final result and iterate through the elements in the matrix
 #Another to traverse to the neighbor nodes of the elements in the matrix
 #The last one to find the neighbor nodes of an element
 #Let's code
