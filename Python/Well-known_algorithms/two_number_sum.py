@@ -3,7 +3,7 @@
 #If no two numbers sum up to the target integer then we need to return False 
 
 #First approach
-#The first approach that probably we are going to think about is a brute-force apporach. We will use two for loops and try every posibility. If two numbers sum up to target then we return those numbers. 
+#The first approach that probably we are going to think about is a brute-force apporach. We will use two for loops. If two numbers sum up to target then we return those numbers. 
 #Lets code it
 def twoNumberSum(arr: list, target: int):
 	for num in range(len(arr) -1):
@@ -13,7 +13,7 @@ def twoNumberSum(arr: list, target: int):
 	return False
 
 #Second approach
-#This is approach is more efficient than the first. In this case we are going to use a set where we are going to store the values already seen. 
+#This approach is more efficient than the first. In this case we are going to use a set where we are going to store the values already seen. 
 def twoNumberSum1(arr: list, target: int):
 	nums_seen = set()
 	for num in arr:
