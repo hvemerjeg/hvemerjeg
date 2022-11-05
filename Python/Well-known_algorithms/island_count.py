@@ -67,4 +67,4 @@ if __name__ == '__main__':
 	[0, 0, 1],
 	[1, 0, 0]
 	]
-	print(riverSizes(matrix))#It should return three since there are three separates ones representing island
+	print(riverSizes(matrix))#It should return three.
