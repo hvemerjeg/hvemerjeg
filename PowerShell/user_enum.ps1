@@ -3,7 +3,7 @@
 
 Get-LocalUser | Select -ExpandProperty Name > users.txt #With the Select and the flag -ExpandProperty we are only selecting the property Name(usernames) and removing the column name that 
 #usually appears on top. We are redirecting the result to a file.
-$files = Get-Content users.txt #The archive with the local users #We iterate through each user of the previous file and apply the command net user username. We are appending the results
+$files = Get-Content users.txt #We iterate through each user of the previous file and apply the command net user username. We are appending the results
 #to another file
 forEach ($user in $files) {
 	net user $user >> file_name.txt
