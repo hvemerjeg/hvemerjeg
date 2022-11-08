@@ -1,4 +1,4 @@
-#Matrix layer rotation
+#Matrix layer rotation.
 #The task of this problem is to rotate a matrix n times
 #For example the following matrix
 #	1 2
