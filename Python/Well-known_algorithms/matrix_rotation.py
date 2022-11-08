@@ -44,7 +44,7 @@ def matrixRotation(matrix: list, rotations: int):
 			while i > t:
 				matrix[i][j] = matrix_copy[i - 1][j]
 				i -= 1
-			#In case that we have more thann one layer we need to augment i and j in one. Also the limits h and t in one.
+			#In case that we have more than one layer we need to augment i and j in one. Also the limits h and t in one.
 			i += 1
 			j += 1
 			h += 1
@@ -55,7 +55,7 @@ def matrixRotation(matrix: list, rotations: int):
 		t = 0	
 		matrix_copy = [[column for column in row] for row in matrix] #After the rotation we update the matrix_copy to be the same as the matrix
 	for row in matrix:
-		print(*row) #We print the matrix we we completed all the rotations
+		print(*row) #We print the matrix once we completed all the rotations
 
 if __name__ == '__main__':
 	#TEST
