@@ -1,5 +1,5 @@
-#!/usr/bin/python3
-
+#THIS IS AN OOP EXERCISE THAT APPEARS IN THE PCAP STUDY RESOURCES
+#This code is for displaying days of the week in a specific format and also adding or subtracting days to that day.
 class Weeker:
 	__weekdays = ('Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun')
 	def __init__(self, day: str):
