@@ -33,7 +33,7 @@ class Timer:
 				self.__hours = (self.__hours - 1) % 24
 
 if __name__ == '__main__':#As you know, any module named __main__ is actually not a module, but the file currently being run.
-    time = Timer(2, 0, 59)
+    	time = Timer(2, 0, 59)
 	print(time)		
 	time.nextSecond()
 	print(time)
