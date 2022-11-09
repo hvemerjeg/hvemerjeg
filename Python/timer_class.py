@@ -1,60 +1,41 @@
 #THIS IS AN OOP EXERCISE THAT APPEARS IN THE PCAP STUDY RESOURCES
 #This code is for displaying a time in a specific format and also adding or subtracting one second to that time.
-class Timer:#Here we define our class Timer and we specify some attributes.
-    def __init__(self, hours: int, minutes: int, seconds: int):#Our class will have three attributes. 
-#All the objects created using this class will share the attributes, but we can create
-#new attributes for just one object outside the class.
-        assert hours < 24 and minutes < 60 and seconds < 60, "Sorry, there is an error in your input"
-        self.hours = hours
-        self.minutes = minutes
-        self.seconds = seconds
-    def show_time(self):#This is a method. Is a function that our objects will be able to use.
-#This method in concrete will display the time in the following format: hh:mm:ss
-#using military time.
-        self.hours, self.minutes, self.seconds = str(self.hours), str(self.minutes), str(self.seconds)
-        if len(self.hours) != 2:
-            self.hours = "0" + self.hours
-        if len(self.minutes) != 2:
-            self.minutes = "0" + self.minutes
-        if len(self.seconds) != 2:
-            self.seconds = "0" + self.seconds
-        return f"{self.hours}:{self.minutes}:{self.seconds}"
+class Timer:
+	def __init__(self, hours=0, minutes=0, seconds=0):
+		self.__hours = hours
+		self.__minutes = minutes
+		self.__seconds = seconds
 
-    def next_second(self):#This method will add a second to the time provided.
-        self.hours = int(self.hours)
-        self.minutes = int(self.minutes)
-        self.seconds = int(self.seconds)
-        ####TRANSFORMING
-        if int((self.seconds + 1) % 60 ) == 0:
-            self.minutes = int(self.minutes + (self.seconds + 1 ) / 60) % 60
-            self.seconds = int((self.seconds + 1) % 60 )
-            if self.minutes == 0:
-                self.hours = int(self.hours + 1) % 24
-        else:
-            self.seconds = int((self.seconds + 1) % 60 )
+	def __str__(self):
+		string_hours = str(self.__hours)
+		string_minutes = str(self.__minutes)
+		string_seconds = str(self.__seconds)
+		if len(str(self.__hours)) == 1:
+			string_hours = '0' + str(self.__hours)
+		if len(str(self.__minutes)) == 1:
+			string_minutes = '0' + str(self.__minutes)
+		if len(str(self.__seconds)) == 1:
+			string_seconds = '0' + str(self.__seconds)
+		return f"\033[1;36;40m{string_hours}:{string_minutes}:{string_seconds}\033[0m"
 
-        print(self.show_time())
-        
-    def prev_second(self):#This method will substract a second to the time provided.
-        self.hours = int(self.hours)
-        self.minutes = int(self.minutes)
-        self.seconds = int(self.seconds)
-        ####TRANSFORMING
-        self.seconds = (self.seconds - 1) % 60
-        if self.seconds == 59:
-            if self.minutes == 0:
-                self.minutes = 59
-                self.hours = (self.hours - 1) % 24
-            else:
-                self.minutes = (self.minutes - 1) % 60
-        print(self.show_time())
+	def nextSecond(self):
+		self.__seconds = (self.__seconds + 1) % 60
+		if self.__seconds == 0:
+			self.__minutes = (self.__minutes + 1) % 60
+			if self.__minutes == 0:
+				self.__hours = (self.__hours + 1) % 24
+
+	def previousSecond(self):
+		self.__seconds = (self.__seconds - 1) % 60
+		if self.__seconds == 59:
+			self.__minutes = (self.__minutes - 1) % 60
+			if self.__minutes == 59:
+				self.__hours = (self.__hours - 1) % 24
 
 if __name__ == '__main__':#As you know, any module named __main__ is actually not a module, but the file currently being run.
-    n = int(input("Insert number of times: "))
-    for _ in range(n):
-        the_input = list(map(int, input().split(" ", 2)))
-        horas, minutos, segundos = the_input[0], the_input[1], the_input[2]
-        time = Timer(horas, minutos, segundos)
-        print("\n" + time.show_time())
-        time.next_second()
-        time.prev_second()
+    time = Timer(2, 0, 59)
+	print(time)		
+	time.nextSecond()
+	print(time)
+	time.previousSecond()
+	print(time)
