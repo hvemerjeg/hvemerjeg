@@ -1,4 +1,4 @@
-#THIS IS AN IMPLEMENTATION OF A LINKED LIST
+#THIS IS AN IMPLEMENTATION OF A SINGLY LINKED LIST
 #I will implement some basic linked list algorithms
 
 class Node:
