@@ -15,7 +15,7 @@ def validatingIP(ip_address: str):
 
 if __name__ == '__main__':
 	#TESTS
-	#In this case we are using a file named ip_address.txt with a bunch of valid and invalid IP addresses to do some tests
+	#In this case I was using a file named ip_address.txt with a bunch of valid and invalid IP addresses to do some tests.
 	try:
 		file = open("ip_address.txt", "rt")
 		for line in file:
