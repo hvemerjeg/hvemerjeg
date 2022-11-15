@@ -1,5 +1,6 @@
-import re
-import os
+#THIS CODE IS FOR VALIDATING IPv4 ADDRESSES AND IPv6 ADDRESSES
+import re #We are going to need the module to perform regular expressions
+import os  
 
 def validatingIP(ip_address: str):
 	IPv4_PATTERN = '^(([0-9]|[1-9][0-9]|[1-2][0-9][0-9])\.){3}([0-9]|[1-9][0-9]|[1-2][0-9][0-9])$'
@@ -20,4 +21,4 @@ if __name__ == '__main__':
 		for line in file:
 			print(validatingIP(line))
 	except IOError as e:
-		print("\033[1;31;40mI/O Error occured: {os.strerror(e.errno)}\033[0m")	
+		print("\033[1;31;40mI/O Error occured: {os.strerror(e.errno)}\033[0m")
