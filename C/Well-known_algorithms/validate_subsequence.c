@@ -9,11 +9,11 @@ int main(void) {
 	scanf("%d", &length_subsequence);
 	int array[length_array];
 	int subsequence[length_subsequence];
-	printf("Enter integers numbers of the array: \n");
+	printf("Enter integers numbers for the array: \n");
 	for (int i = 0; i < length_array; ++i) {
 		scanf("%d", &array[i]);
 	}
-	printf("Enter integers numbers of the subsequence: \n");
+	printf("Enter integers numbers for the subsequence: \n");
 	for (int i = 0; i < length_subsequence; ++i) {
 		scanf("%d", &subsequence[i]);
 	}
