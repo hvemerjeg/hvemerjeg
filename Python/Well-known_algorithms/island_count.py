@@ -11,7 +11,7 @@
 #Another to traverse through the neighbor nodes of the elements in the matrix
 #The last one to find the neighbor nodes of an element
 #Let's code
-def riverSizes(matrix): #This is the first function.
+def islandSizes(matrix): #This is the first function.
 	result = 0 #Since we need to store the number of islands we are going to create a variable to zero and increment it if needed
 	visited = [[False for col in row] for row in matrix] #It is fundamental to keep track of the visited nodes, otherwise we will be lost visiting the same node infinitely. For this 
 #purpose we are going to create the same matrix full of False values instead oof 1's and 0's. In case that we visit a element at index i, j we will set the element in this position to True.
@@ -67,4 +67,4 @@ if __name__ == '__main__':
 	[0, 0, 1],
 	[1, 0, 0]
 	]
-	print(riverSizes(matrix))#It should return three.
+	print(islandSizes(matrix))#It should return three.
