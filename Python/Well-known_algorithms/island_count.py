@@ -25,7 +25,7 @@ def islandCount(matrix): #This is the first function.
 def traverseNode(i, j, matrix, visited):
 	#Breadth-first search is the traverse algorithm that I will implement. You can use a depth-first search too. As you may know the only difference is that the
 #breadth-first search uses a queue and the depth-first search uses a stack. Also, we can not implement a breadth-frst search with recursion
-	at_least_river = False #I Will use this flag to know if in any moment I hit land
+	at_least_land = False #I Will use this flag to know if in any moment I hit land
 	queue = [[i, j]] #The elements inside the queue are lists containing the indexes i for row and j for columns
 	while len(queue): #While the length of the queue is different than 0 we keep the while loop
 		current = queue.pop(0) #We take pop an element of the queue. Now current contains a list with indexes i and j
@@ -36,11 +36,11 @@ def traverseNode(i, j, matrix, visited):
 		visited[i][j] = True #Otherwise we set the element to true in the visited matrix
 		if matrix[i][j] == 0: #If the element is 0 we hit river, so we continue to the next iteration
 			continue
-		at_least_river = True #We hit land
+		at_least_land = True #We hit land
 		neighbors = getNeighbors(i, j, matrix, visited) #Getting the neighbors of the element
 		for neighbor in neighbors:
 			queue.append(neighbor) #Appending the neighbors of the elements to the queue to be visited
-	if at_least_river:
+	if at_least_land:
 		return 1	
 	return 0
 
