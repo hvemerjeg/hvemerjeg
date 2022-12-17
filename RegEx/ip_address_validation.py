@@ -3,7 +3,7 @@ import re #We are going to need the module to perform regular expressions
 import os  
 
 def validatingIP(ip_address: str):
-	IPv4_PATTERN = '^(([0-9]|[1-9][0-9]|[1-2][0-9][0-9])\.){3}([0-9]|[1-9][0-9]|[1-2][0-9][0-9])$'
+	IPv4_PATTERN = '^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$'
 	IPv6_PATTERN = '^([0-9a-f]{0,4}:){7}[0-9a-f]{0,4}$'
 	
 	if re.search(IPv4_PATTERN, ip_address):
