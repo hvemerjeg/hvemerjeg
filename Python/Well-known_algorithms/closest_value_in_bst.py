@@ -41,9 +41,9 @@ class BinaryTree: #Here we are constructing the class BinaryTree. A binary tree 
             if tree.value < target: #If the value of the current node is higher than the target, making use of the fact that all the higher values of a node
 #are placed to the right side and all the lower values are placed to left side of the node, we can use recursion to travel depending of
 #the result of comparing the target and the value of the current node.
-                self.findClosestValue(tree.right, 31, self.closest)
+                self.findClosestValue(tree.right, target, self.closest)
             elif tree.value > target:
-                self.findClosestValue(tree.left, 31, self.closest)
+                self.findClosestValue(tree.left, target, self.closest)
             else: #If the value of the current node is equal to the target we return the value of the instance variable self.closest.
                 return self.closest
         return self.closest
