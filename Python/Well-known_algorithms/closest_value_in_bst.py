@@ -29,7 +29,7 @@ class Node:
 	def findClosest(self, target):
 		result = float("inf")
 		queue = [self]
-		while len(queue): #And probable other thing
+		while len(queue):
 			current_node = queue.pop(0)
 			if abs(target - current_node.value) < abs(target - result):
 				result = current_node.value
