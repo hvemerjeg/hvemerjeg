@@ -18,11 +18,11 @@ class CaesarCipher:
         return CaesarCipher.encrypt(ciphtext, -key)
 
 def main():
+    '''
+    python3 Caesar_cipher.py enc
+    python3 Caesar_cipher dec
+    '''
     if len(sys.argv) != 2:
-        '''
-        python3 Caesar_cipher.py enc
-        python3 Caesar_cipher dec
-        '''
         sys.stderr.write(f'[ + ] Usage: {sys.argv[0]} enc/dec\n')
         exit(1)
     if sys.argv[1] == 'enc':
