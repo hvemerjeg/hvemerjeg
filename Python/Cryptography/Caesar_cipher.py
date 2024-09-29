@@ -17,7 +17,7 @@ class CaesarCipher:
     def decrypt(ciphtext: str, key: int) -> str:
         return CaesarCipher.encrypt(ciphtext, -key)
 
-def main():
+def main() -> None:
     '''
     python3 Caesar_cipher.py enc
     python3 Caesar_cipher dec
