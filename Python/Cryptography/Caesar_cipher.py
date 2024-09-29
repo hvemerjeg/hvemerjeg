@@ -2,7 +2,7 @@
 #If you do not know how the Caesar cipher works check out the description given by Wikipedia(I found it very helpful):https://en.wikipedia.org/wiki/Caesar_cipher
 import sys
 class CaesarCipher:
-    alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'# You can create this with the following bash command: for char in {A..Z}; do echo $char; done | xargs | tr -d ' ' 
+    alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
     def encrypt(plaintext: str, key: int) -> str:
         ciphertext = ''
