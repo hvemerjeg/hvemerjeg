@@ -32,36 +32,3 @@ def valid_s_bsequence(tupla: tuple, sequence: tuple):#I decided to use tuples in
         if indx1 == len(sequence):
             return indx1 == len(sequence)
     return indx1 == len(sequence)
-
-#THIRD APPROACH:
-#This approach is not an efficient one, but I have a special place in my heart to this one, because this is one of 
-#the first solutions that I came to when I started in python.
-def valid_s_b_quence(arr: list, s: tuple):#In this case I need to manipulate the elements inside the main
-#list, thats the reason why I am using a list in this case.
-    x = []
-    y = []
-    for i in s:
-        try:
-            x.append(arr.index(i))
-            y.append(arr.index(i))
-            arr.insert(arr.index(i), 'A')#This nonsense swap, is because the function .index() gets the
-#index of the first coincidence. So if we a have repeated values we will have troubles.
-            arr.remove(i)
-        except ValueError:
-            return False#This means that the sequence s, is not a subset of the main list arr.
-    x.sort()#To check if the values appeared in order we try to apply the sort function to one of our 
-#created lists.
-    if x != y:#If this list changes when the sort is applied that means it was not ordered in first place.
-#So we return False
-        return False
-    else:
-        return True
-    
-if __name__ == '__main__':
-    the_array = tuple(map(int, input().split()))
-    the_sequence = tuple(map(int, input().split()))  
-    print(valid_subsequence(the_array, the_sequence))
-    print(valid_s_bsequence(the_array, the_sequence))
-    the_array = list(the_array)
-    print(valid_s_b_quence(the_array, the_sequence))
-	
