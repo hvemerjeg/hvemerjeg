@@ -33,7 +33,7 @@ void machineChoice(char *machine_choice) {
 // main logic of the game
 int rockPaperScissors() {
 	char user_choice[9]; 
-	char machine_choice[9];					 //
+	char machine_choice[9];
 	unsigned short user_points = 0, machine_points = 0;
 	while (user_points < 3 && machine_points < 3) {
 		userChoice(user_choice);
