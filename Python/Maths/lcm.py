@@ -30,9 +30,6 @@ def lcm(arr:list[int]) -> list[int]:
     lcm = 1
     prime_factors = dict()
     for n in arr:
-        if n < 1:
-            print("Values should be equal or greater than 1")
-            exit(1)
         prime_factors[n] = primeFactor(n)
 
     for c in {b for a in prime_factors.values() for b in a}:
@@ -46,7 +43,10 @@ def main() -> None:
     except:
         print("Only numbers allowed. You need to insert numbers space separated.")
         exit(1)
-
+    for n in user_numbers:
+        if n < 1:
+            print("Values should be equal or greater than 1")
+            exit(1)
     return lcm(user_numbers)
 
 if __name__ == "__main__":
