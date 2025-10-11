@@ -41,7 +41,7 @@ def main() -> None:
     try:
         user_numbers = list(map(int, user_numbers))
     except:
-        print("Only numbers allowed. You need to insert numbers space separated.")
+        print("Only integers allowed. You need to insert integers space separated.")
         exit(1)
     for n in user_numbers:
         if n < 1:
