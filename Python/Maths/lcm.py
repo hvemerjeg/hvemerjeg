@@ -26,7 +26,7 @@ def primeFactor(n:int) -> list[int]:
                 current_factor += 1
     return factors
 
-def lcm(arr:list[int]) -> list[int]:
+def lcm(arr:list[int]) -> int:
     lcm = 1
     prime_factors = dict()
     for n in arr:
