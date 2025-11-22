@@ -3,6 +3,7 @@ import argparse
 
 """
 Fast, simple just for fun tree like file listing
+Usage: python3 tree_ls.py /directory
 """
 
 # Global variables
