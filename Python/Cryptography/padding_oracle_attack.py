@@ -1,8 +1,12 @@
 # Padding oracle attack on AES CBC mode
 import base64
 import subprocess
-from urllib.parse import unquote, quote
 
+# TODO
+# Fix it. It does not work as expected with ciphertexts with more than two blocks
+# Implement base64 encoding decoding
+# Pass KEY, IV, and ciphertext as arguments
+# Refactor
 
 BLOCK_SIZE = 16
 
@@ -58,7 +62,7 @@ def confirmFinding(blocks:list, block:int, iv:list, position:int):
 		# than 01, and at position 15 we are searching for the value that results
 		# in 01 padding
         return True
-    print(f"[+] Cheking if the value found is correct since we are at position 15")
+    print(f"[+] Checking if the value found is correct since we are at position 15")
     iv[position - 1] ^= 1
     bytes_iv = bytearray(iv)
     blocks[0] = bytes_iv.hex()
