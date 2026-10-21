@@ -3,7 +3,6 @@ import base64
 import subprocess
 
 # TODO
-# Fix it. It does not work as expected with ciphertexts with more than two blocks
 # Implement base64 encoding decoding
 # Pass KEY, IV, and ciphertext as arguments
 # Refactor
@@ -47,7 +46,7 @@ def decrypt(ciphertext:str, blocks:list, encoding="hex") -> str:
             exit()
     for v1, v2 in zip(bytes.fromhex(blocks[0]), x):
         plain_text_block += format(v1 ^ v2, "02x")
-    return f"[+] Decrypted plaintext: {plain_text_block}"
+    return plain_text_block
 
 def confirmFinding(blocks:list, block:int, iv:list, position:int):
 	# When the position is 15, we need to confirm that the resulting padding
@@ -73,6 +72,7 @@ def base64Encode(string:str):
 
 def paddingOracleAttack(ciphertext:str, iv:str, encoding="hex"):
 	# It is easier to visualize with hex encoding rather than with base64 encoding
+    plaintext = ""
     if encoding == "base64":
         ciphertext_base64 = ciphertext
         ciphertext = base64.b64decode(ciphertext.encode("utf-8").decode()).hex()
@@ -82,13 +82,16 @@ def paddingOracleAttack(ciphertext:str, iv:str, encoding="hex"):
         raise ValueError("The length of the iv is invalid for a hexadecimal value")
 
     blocks = [ciphertext[i:i+32] for i in range(0, len(ciphertext), 32)]
-    for i in range(0, len(blocks), 2):
-        print(decrypt(ciphertext, blocks[i:i+2], encoding="hex"))
-    print(decrypt(ciphertext, [iv, ciphertext[:32]], encoding="hex"))
-
+    blocks.insert(0, iv)
+    for i in range(len(blocks) - 1):
+        block_plaintext = decrypt(ciphertext, blocks[i:i+2], encoding="hex")
+        print(f"[+] Decrypted plaintext block: {block_plaintext}")
+        plaintext += block_plaintext
+    return plaintext
 
 def main():
-    paddingOracleAttack("240e915d3b4c953373548ffccd953f4e83b4db43466c969b43de34b4a07b9805", iv="70616473616764617061647361676461", encoding="hex")
+    plaintext = paddingOracleAttack("10d694283f46b1c8b05ecc7c54ec5ee921f5973ff9afcbd063e64c70d904a98a5b9866cb141dcf6edcc1893cf82cd6f0a2ec70a4856bfa70b39517268aed93484fb234becb3ad514b95d7026d6745869", iv="70616473616764617061647361676461", encoding="hex")
+    print(f"[+] Plaintext: {bytes.fromhex(plaintext).decode()}")
 
 if __name__ == "__main__":
     main()
