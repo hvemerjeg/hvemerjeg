@@ -25,11 +25,13 @@ def decrypt(ciphertext:str, blocks:list, encoding="hex") -> str:
         #print(f"[+] Searching at position {position}")
         pad_value = BLOCK_SIZE - position
         iv = [0] * BLOCK_SIZE
-		# First: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 for finding value at position 15 that results in 01 padding in the block plaintext
-		# Second: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 X^01
-		# Third : 0 0 0 0 0 0 0 0 0 0 0 0 0 0 X^02 X^02
-        for i in range(1, pad_value + 1):
-            iv[-i] = x[-i] ^ pad_value
+        # v stands for the possible value (from 0 to 255)
+		# First: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 v for finding value at position 15 that results in 01 padding in the block plaintext
+		# Second: 0 0 0 0 0 0 0 0 0 0 0 0 0 0 v X^01 for finding value at position 14 that results in 02 padding in the block plaintext
+		# Third : 0 0 0 0 0 0 0 0 0 0 0 0 0 v X^02 X^02 ...
+        if position != 15:
+            for i in range(1, pad_value + 1):
+                iv[-i] = x[-i] ^ pad_value
         for v in range(256):
             iv[position] = v
             bytes_iv = bytearray(iv)
